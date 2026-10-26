@@ -1,0 +1,7 @@
+# dsh bundle patch: inserts this plugin into the profile's layer stack.
+#
+# A plain insert (id + name, no config, no expressions) so the live patch
+# reload can activate it without an app restart.
+- insert:
+    - id: fluid-chat-width
+      name: 'dsh-fluid-chat-width'
