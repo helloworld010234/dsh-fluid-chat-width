@@ -1,0 +1,60 @@
+{
+  "name": "dsh-fluid-chat-width",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fluid conversation width for the DeepSeek Harness web GUI: the chat column follows the window minus a 64px margin, capped at 1560px, and a dragged handle still overrides it.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "client-plugin",
+    "web-client-plugin",
+    "conversation",
+    "conversation-width",
+    "fluid-width",
+    "responsive",
+    "layout",
+    "对话宽度"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloworld010234/dsh-fluid-chat-width.git"
+  },
+  "homepage": "https://github.com/helloworld010234/dsh-fluid-chat-width#readme",
+  "bugs": {
+    "url": "https://github.com/helloworld010234/dsh-fluid-chat-width/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "preflight": "node scripts/preflight.mjs",
+    "prepublishOnly": "node scripts/preflight.mjs"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}
